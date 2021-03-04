@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="blog, coding blog, 코딩, 코딩 블로그, 블로그, 코딩일지, 일지, 미니홈피, 싸이월드">
+    <title>미니홈피</title>
+    <link href="StyleSheet.css" rel="stylesheet">
+    <script src="jquery-2.2.4.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+        <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+    <script>
+      $(document).ready(function(){
+       
+        $('#blog').hide();
+        $('#blog_edit').hide();
+        $('#visitor').hide();
+        $('#setting').hide();
+        $('#list_post').hide();
+        $('#posts').hide();
+        $('#admin_post').hide();
+        $('#list_post2').hide(); 
+        $('#posts2').hide();
+      });
+      
+    </script>
+    <script src="index.js"></script>
+
+  <body id="body">
+
+      <div class="header"></div>
+
+      <div class="wrapper">
+        <div class="box1"></div>
+
+        <div class="box2">
+          <p id="count"></p>
+          <script>visitCount()</script>
+        </div>
+
+        <div class="box3">
+        <h1 id="h1">코딩공부 일지</h1>
+        </div>
+
+        <div class="box4"></div>
+
+        <div class="box5"></div>
+
+        <div class="box6">
+          <img id="hi" src="hi.gif" alt="hi pic">
+          <p id="folder">
+            <button id="sub1" onclick="blog()">◎ 코딩관련 </button>
+            <button id="sub2" onclick="blog2()">◎ 계획한것들</button>
+           
+          </p>
+        </div>
+
+        <div class="box7">
+
+
+          <!--홈페이지-->
+          <p id='miniroom'> 미니룸 </p>
+          <img id="room" src="https://firebasestorage.googleapis.com/v0/b/mywebsite-b8787.appspot.com/o/room.JPG?alt=media&token=12524803-6d79-46e8-9549-ff09cf3ea5d5" alt="room pic"></img>
+
+
+
+          <!--블로그-->
+          
+
+          <script> posting();</script>
+          <script>  plan();</script>
+          <ul id="list_post" style="border:none;"></ul>
+          <ul id="list_post2" style="border:none;"></ul>
+          <button id="admin_post" onclick="adminPost()">post</button>
+          <p id="posts"></p>
+          <p id="posts2"></p>
+          <div id="blog_edit"> 
+            <select id="txt_type">
+              <option value="Blog">Blog</option>
+              <option value="Plan">Plan</option>
+            </select>
+            <textarea id="txt_title" placeholder="제목을 적으세요"></textarea>
+            <textarea id="txt_post" placeholder="글을 적으세요"></textarea>
+           
+            <script>
+             CKEDITOR.replace( 'txt_post',{
+              extraPlugins: 'codesnippet',
+              codeSnippet_theme: 'tomorrow-night'
+            }  );
+            </script>
+     
+
+            <button id="btn_post" onclick="abc()">post</button>
+        
+          </div>
+
+
+          <!--방명록-->
+          <script> comment(); </script>
+          <div id="visitor"> 
+            <textarea id="guest" placeholder="아이디"></textarea>
+            <textarea id="comment" placeholder="방명록을 남겨주세요"></textarea>
+            <button id="btn_comment" onclick="btnComment()">post</button>
+            <p id="line"></p>
+            <ul id="comments" style="border:none;"></ul>
+          </div>
+
+
+          <!--설정-->
+          <div id="setting"> 
+            <script>
+              $(document).ready(function(){
+              firebase.firestore().collection('User').doc('Admin').get().then(function(snap){  
+              var admin = (snap.data().name);
+              var user = firebase.auth().currentUser;
+          
+              if (user) {
+                $('#logout').show();
+                $('#admin2').show();
+                $('#login').hide();
+                $('#admin1').hide();
+                } 
+              else {
+                $('#login').show();
+                $('#admin1').show();
+                $('#logout').hide(); 
+                $('#admin2').hide();
+                }
+              });
+               })
+            </script>
+            <p id="admin1">관리자 페이지입니다</p>
+            <button id="login" onclick="login()">Login</button>
+            <p id="admin2">로그인되었습니다</p>
+            <button id="logout" onclick="logout()">Logout</button>
+          </div>
+        </div>
+
+        <!--네비게이션버튼-->
+        <div class="box8_1">
+          <button id="bt1" onclick="home()">홈</button>
+          <button id="bt2" onclick="blog()">블로그</button>
+          <button id="bt3" onclick="visitor()">방명록</button>
+          <button id="bt4" onclick="setting()">설정</button>
+        </div>
+
+        <div class="box9">
+          <p id="intro">
+            <br>컴싸전공인데 코딩을못해서...
+            <br><br>
+             코딩일지 적으며 공부하려
+             <br> 
+            만든 블로깅웹사이트입니다
+            <br><br>
+            가르치려 만든
+            웹사이트가 <br>아니니
+           틀린내용있으면 
+            <br>
+            알려주세요!
+
+          </p>
+          
+        </div>
+
+        <div class="box10">
+          <p id='new'> ★최신글★ </p>
+          <ul id="lists" style="border:none;"></ul>
+          <script>newest();</script>
+        </div>
+
+        <div class="box11">
+        <iframe width="91%" height="220%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1031694424&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+        </div>
+
+      </div>
+
+      <div class="footer"> </div>
+
+  </body>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-functions.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAAx_Lx55bvuw9I3qCGbr4hj1HeRnD2QKs",
+    authDomain: "mywebsite-b8787.firebaseapp.com",
+    databaseURL: "https://mywebsite-b8787.firebaseio.com",
+    projectId: "mywebsite-b8787",
+    storageBucket: "mywebsite-b8787.appspot.com",
+    messagingSenderId: "66866745617",
+    appId: "1:66866745617:web:0c4f6f1b95a23ec53bbcb0",
+    measurementId: "G-4YSC1EYFH3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  firebase.firestore();
+  firebase.functions();
+</script>
+
+
+</html>

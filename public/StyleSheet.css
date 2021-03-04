@@ -1,0 +1,708 @@
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow: hidden;
+    
+}
+
+#refe{
+  font-family: "NeoDunggeunmo";
+  font-size: 6vw;
+  text-align: center;
+  margin: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border:#1D8EB2 2vw double;
+  border-radius: 2vw;
+}
+
+img {
+    width: 92%;
+    height: 92%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#hi{
+  object-fit: cover;
+  width: 92%;
+  height:95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 5%;
+}
+
+#room{
+  margin-top: 0%;
+  margin-bottom: 5%;
+  border-radius: 2%;
+  height: 80%;
+  width: 80%;
+  border-top-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  background-color:  #69D3DA ;
+  border:#1D8EB2 .3vw double;
+}
+
+#body{
+  margin:0;
+  background-color: rgb(173, 216, 230);
+  /*background-image: url('pics/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  */
+ 
+}
+#count{
+  height:50%;
+  width:70%;
+  margin-left: 6%;
+  margin-top: 25%;
+  margin-bottom: 0%;
+  padding:0;
+  padding-bottom: -5%;
+  font-size: .95vw;
+  font-family: "NeoDunggeunmo";
+}
+
+#miniroom{
+  font-family: "NeoDunggeunmo";
+  font-size: 1vw;
+  height:fit-content ;
+  width: 11%;
+  height: 5%;
+  margin-top: 2.2%;
+  margin-bottom: 0%;
+  margin-left: 10%;
+  padding-top: 0%;
+  padding-right: 0%;
+  padding-bottom : 3.2%;
+  border-radius: 0.1vw;
+  background-color:  #69D3DA ;
+  border:#1D8EB2 .3vw double;
+  text-align: left;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  border-bottom: #1D8EB2 .1vw double;
+}
+
+#new{
+  font-family: "NeoDunggeunmo";
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+  margin-left: 1%;
+  margin-top: .5%;
+  margin-bottom: -.5%;
+  width:fit-content;
+}
+
+#lists{
+  font-size: 1vw;
+  text-align: center;
+  overflow:hidden;
+  overflow-y:auto;
+  height:70%;
+  margin-top: 0%;
+}
+
+
+
+#list_post,#list_post2{
+  height:90%;
+  margin-top: 5%;
+  overflow:hidden;
+  overflow-y:scroll;
+  font-size: 1.2vw;
+  padding-left:0px; 
+  text-align: center;
+}
+
+#admin_post{
+  border:2px black solid;
+  width: 13.5%;
+  margin-left: 80%;
+  align-items: right;
+  text-align: center;
+  font-family: "NeoDunggeunmo";
+  background-color: #69D3DA;
+  font-size: 1.2vw;
+  border:#1D8EB2 .3vw double;
+  border-radius: 1vw;
+
+}
+#admin_edit{
+  border:2px black solid;
+  width: 13.5%;
+  margin-left: 80%;
+  align-items: right;
+  text-align: center;
+  font-family: "NeoDunggeunmo";
+  background-color: #69D3DA;
+  font-size: 1.2vw;
+  border:#1D8EB2 .3vw double;
+  border-radius: 1vw;
+
+}
+#posts,#posts2{
+  height:95%;
+  overflow:hidden;
+  overflow-y:scroll;
+  font-size: 1.2vw;
+  padding-left:1%; 
+  padding-right:1%;
+  padding-top: 0%;
+  margin:1%;
+  text-align: center;
+  border:rgb(18, 98, 122) .1vw dashed;
+  border-radius: 0.4vw;
+  background-color:rgb(188, 245, 245);
+}
+
+#list_post::-webkit-scrollbar, #lists::-webkit-scrollbar, #list_post2::-webkit-scrollbar   {
+  width: .72vw;
+              /* width of the entire scrollbar */
+}
+
+#posts::-webkit-scrollbar, #posts2::-webkit-scrollbar, #lists::-webkit-scrollbar{
+  width: .6vw;
+}
+
+
+#list_post::-webkit-scrollbar-thumb, #list_post2::-webkit-scrollbar-thumb,  #posts::-webkit-scrollbar-thumb, #lists::-webkit-scrollbar-thumb {
+  background-color: #69D3DA;    /* color of the scroll thumb */
+  border-radius: 0.4vw;       /* roundness of the scroll thumb */
+  border: 2.5px solid #1D8EB2;  /* creates padding around scroll thumb */
+}
+
+
+#timestamp{
+  
+  width: 20%;
+  height: 25%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0.1vw;
+  background-color:  #69D3DA ;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#btn_title{
+  
+  width: 70%;
+  height: 25%;
+  border-radius: 0.1vw;
+  background-color:  #69D3DA ;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#hometitle{
+  width: 70%;
+  height: 20%;
+  border-radius: .5vw;
+  background-color:  #69D3DA ;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#hometimestamp{
+   
+  width: 20%;
+  height: 25%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0.5vw;
+  background-color:  #69D3DA ;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+#btn_title:hover, #hometitle:hover, #admin_post:hover{
+  background-color: rgb(105, 218, 180);
+}
+#visitor{
+  height:8vw;
+  overflow:hidden;
+  overflow-y:auto;
+  padding-right:4%;
+}
+
+
+
+#guest{
+  width:25%;
+  height: 10%;
+  resize: none;
+  margin-left: 5%;
+  overflow:hidden;
+  overflow-y:auto;
+  border-radius: 0.1vw;
+  background-color: rgb(203, 230, 173);
+  border:#1D8EB2 .3vw double;
+  font-size: 1vw;
+}
+
+#comment{
+  width:95%;
+  height:25%;
+  resize: none;
+  margin-left: 5%;
+  overflow:hidden;
+  overflow-y:auto;
+  border-radius: 0.1vw;
+  background-color: rgb(203, 230, 173);
+  border:#1D8EB2 .3vw double;
+  font-size: 1vw;
+}
+
+#guest::-webkit-input-placeholder,#comment::-webkit-input-placeholder {
+  font-size: 1.2em;
+  font-family: "NeoDunggeunmo";
+}
+#btn_comment{
+  border-radius: 1vw;
+  background-color: rgb(203, 230, 173);
+  float: right;
+  padding-left:2%;
+  padding-right: 2%;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  font-size: 1vw;
+  text-align: center;
+  outline: none;
+}
+#btn_com{
+  height:8vw;
+  width:100%;
+  overflow:hidden;
+  overflow-y:auto;
+  font-size: 1.2vw;
+  text-align: left;
+  border-radius: 0.1vw;
+  background-color: rgb(173, 228, 230);
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  margin-bottom: 2vw;
+}
+
+#com_time{
+  height: 25%;
+  border-radius: 0.1vw;
+  background-color:  rgb(173, 228, 230);
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-items: flex-end;
+}
+
+#btn_guest{
+  width: 28%;
+  height: 25%;
+  border-radius: 0.1vw;
+  background-color:  rgb(173, 228, 230);
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#line{
+  border-bottom:rgb(94, 94, 94) 2px dashed;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+#visitor::-webkit-scrollbar, #btn_com::-webkit-scrollbar {
+  width: .9vw;
+              /* width of the entire scrollbar */
+}
+
+
+#btn_com::-webkit-scrollbar {
+  width: .6vw;
+              /* width of the entire scrollbar */
+}
+
+
+#visitor::-webkit-scrollbar-thumb,  #btn_com::-webkit-scrollbar-thumb {
+  background-color: #69D3DA;    /* color of the scroll thumb */
+  border-radius: 0.4vw;;       /* roundness of the scroll thumb */
+  border: 2.5px solid #1D8EB2;  /* creates padding around scroll thumb */
+}
+
+li{
+  list-style: none;
+  font-family: "Recipekorea";
+  font-size: 1.25vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#h1{
+  font-family: "NeoDunggeunmo";
+  font-size: 2.8vw;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 1.5vw;
+}
+#intro{
+
+  height: 100%;
+  padding-top: 0;
+  padding-left: 2%;
+  font-family: "MapoGoldenPier";
+  font-size: .9vw;
+
+}
+
+p{
+  
+  font-size: 1vw;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 3vw;
+  padding-left: .7vw;
+
+}
+@font-face { 
+  font-family: 'MapoGoldenPier'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal; }
+
+@font-face {
+font-family: 'Recipekorea';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'NeoDunggeunmo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+
+a{
+  text-decoration: none;
+  text-decoration-color: none;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "NeoDunggeunmo";
+  font-size: 1.48vw;
+
+
+  display: flex;
+  justify-content:flex-start ;
+  margin-left: .1vw;
+  margin-top: .1vw;
+  align-items: center;
+  line-height: 180%;
+}
+
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:default {
+  text-decoration: none;
+  color: black;
+}
+
+.header{
+  height:10%;
+  width:100%;
+}
+
+.footer {
+  height:10%;
+  width:100%;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns:repeat(15, 1fr);
+  grid-template-rows:repeat(10, 1fr);
+  grid-gap:.05em;
+  height:80%;
+}
+
+.box1{
+  grid-column:1/3;
+  grid-row:1/11;
+  border: 0px;
+}
+
+.box2{
+  grid-column:3/5;
+  grid-row:1/2;
+  border:#1D8EB2 .3vw double;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: .7vw;
+  background-color: #69D3DA ;
+}
+
+
+.box3{
+  grid-column:5/12;
+  grid-row:1/2;
+  border:#1D8EB2 .3vw double;
+  border-top-left-radius: .7vw;
+  border-top-right-radius: 1vw;
+  background-color: #69D3DA ;
+}
+
+.box4{
+  grid-column:12/14;
+  grid-row:1/2;
+}
+
+.box5{
+  grid-column:14/16;
+  grid-row:1/11;
+
+}
+
+.box6{
+  grid-column:3/5;
+  grid-row:2/6;
+  border:#1D8EB2 .3vw double;
+  background-color: #69D3DA ;
+}
+
+.box7{
+  grid-column: 5/12;
+  grid-row: 2/8;
+  border:#1D8EB2 .3vw double;
+  background-color: #69D3DA ;
+ 
+}
+#txt_post{
+  font-style: none;
+}
+
+
+#txt_title{
+  width:90%;
+  height:100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  resize: none;
+  border-radius: 0.1vw;
+  background-color: rgb(203, 230, 173);
+  border:#1D8EB2 .3vw double;
+}
+
+
+#txt_type{
+  width:20%;
+  height:2.5vw;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  resize: none;
+  border-radius: 0.1vw;
+  background-color: rgb(203, 230, 173);
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+}
+ 
+
+#btn_post{
+  width: 10%;
+  height: 25%;
+  border-radius: 1vw;
+  background-color: rgb(81, 188, 196);
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  font-size: 1vw;
+  text-align: center;
+  margin-left: 45%;
+  margin-right: 45%; 
+}
+
+#admin1, #admin2{
+  font-family: "NeoDunggeunmo";
+  font-size: 3vw;
+  text-align: center;
+  margin: 0;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+
+}
+#login, #logout{
+  display: inline-block;
+  width: 70%;
+  height: 25%;
+  border-radius: 1vw;
+  background-color: rgb(81, 188, 196);
+  border:#1D8EB2 .3vw double;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 0;
+  font-family: "NeoDunggeunmo";
+  font-size: 2vw;
+  text-align: center;
+  outline: none;
+}
+
+#login:active, #logout:active{
+ 
+  border: lightseagreen .3vw double;
+}
+
+
+#login:hover, #logout:hover{
+  background-color: rgb(105, 218, 180);
+}
+
+
+
+
+
+
+.box8_1{
+  grid-column: 12/13;
+  grid-row: 2/5;
+
+}
+
+#set{
+  font-family: "NeoDunggeunmo";
+  margin-top: 5vw;
+  font-size: 4vw;
+  text-align: center;
+}
+
+#bt1, #bt2, #bt3, #bt4{
+  display: inline-block;
+  width: 75%;
+  height: 25%;
+  border-top-right-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  background-color: #69D3DA ;
+  border:#1D8EB2 .3vw double;
+  margin: 0;
+  padding: 0;
+  font-family: "NeoDunggeunmo";
+  font-size: 1.2vw;
+  text-align: left;
+  text-indent: 6%; 
+  outline: none;
+ 
+}
+#bt1:active, #bt2:active, #bt3:active, #bt4:active,
+#btn_post:active, #btn_edit:active, #btn_delete:active{
+ 
+  border: lightseagreen .3vw double;
+}
+
+
+#bt1:hover, #bt2:hover, #bt3:hover, #bt4:hover,
+#btn_post:hover, #btn_edit:hover, #btn_delete:hover{
+  background-color: rgb(105, 218, 180);
+}
+
+
+#visitor{
+  width: 92%;
+  height: 92%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.box9{
+  grid-column: 3/5;
+  grid-row: 6/10;
+  border:#1D8EB2 .3vw double;
+  border-bottom-left-radius: 1vw;
+  background-color: #69D3DA ;
+}
+
+.box10{
+  grid-column: 5/12;
+  grid-row: 8/10;
+  border:#1D8EB2 .3vw double;
+  border-bottom-right-radius: 1vw;
+  background-color: #69D3DA ;
+}
+
+.box11{
+  grid-column: 13/16;
+  grid-row: 1/3;
+  padding-left: 1.3vw;
+}
+
+#sub1{
+  width: 85%;
+  background-color: #69D3DA ;
+  border-radius: .2vw;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  font-size: 1vw;
+  text-align: left;
+  padding-right: 1vw;
+  
+}
+#sub2{
+  width: 85%;
+  background-color: #69D3DA ;
+  border-radius: .2vw;
+  border:#1D8EB2 .3vw double;
+  font-family: "NeoDunggeunmo";
+  font-size: 1vw;
+  text-align: left;
+  padding-right: 1vw;
+}
+
+#sub1:hover, #sub2:hover{
+  background-color: rgb(74, 228, 215);
+}
